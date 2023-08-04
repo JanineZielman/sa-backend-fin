@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timetables",
+  "info": {
+    "singularName": "timetable",
+    "pluralName": "timetables",
+    "displayName": "Timetable",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "biennial": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::biennial.biennial"
+    },
+    "event": {
+      "type": "dynamiczone",
+      "components": [
+        "biennial.event"
+      ]
+    }
+  }
+}

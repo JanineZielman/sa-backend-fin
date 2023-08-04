@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_highlight_highlights",
+  "info": {
+    "displayName": "Highlight",
+    "icon": "award",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_biennial_collapsibles",
+  "info": {
+    "displayName": "collapsible",
+    "icon": "angle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "open": {
+      "type": "boolean"
+    },
+    "text_block": {
+      "type": "richtext"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "medium",
+        "big"
+      ]
+    }
+  }
+}

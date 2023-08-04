@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_basic_shop_items",
+  "info": {
+    "displayName": "shop_item",
+    "icon": "shopping-cart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "price": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "info": {
+      "type": "string"
+    }
+  }
+}

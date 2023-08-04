@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_biennial_times",
+  "info": {
+    "displayName": "times",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    }
+  }
+}

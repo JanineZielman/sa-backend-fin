@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_dates_dates",
+  "info": {
+    "displayName": "till",
+    "icon": "sort-numeric-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "end_date": {
+      "type": "date"
+    }
+  }
+}

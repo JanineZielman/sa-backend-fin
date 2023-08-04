@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_dates_deadlines",
+  "info": {
+    "displayName": "single",
+    "icon": "calendar-times",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "single_date": {
+      "type": "date"
+    }
+  }
+}

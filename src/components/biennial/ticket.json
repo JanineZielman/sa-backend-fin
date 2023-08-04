@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_biennial_tickets",
+  "info": {
+    "displayName": "ticket",
+    "icon": "ticket-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "link": {
+      "type": "string"
+    },
+    "programme": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::programme.programme"
+    }
+  }
+}

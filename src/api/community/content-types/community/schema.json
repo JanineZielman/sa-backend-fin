@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "communities",
+  "info": {
+    "singularName": "community",
+    "pluralName": "communities",
+    "displayName": "Community",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "introTextBig": {
+      "type": "text"
+    },
+    "introTextSmall": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_basic_sidenotes",
+  "info": {
+    "displayName": "sidenote",
+    "icon": "align-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sidenote": {
+      "type": "richtext"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "medium",
+        "big"
+      ]
+    }
+  }
+}

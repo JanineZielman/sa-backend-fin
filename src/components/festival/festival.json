@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_festival_festivals",
+  "info": {
+    "displayName": "Festival",
+    "icon": "star-of-life",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "locations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "festival.locations"
+    },
+    "programme": {
+      "type": "string"
+    }
+  }
+}

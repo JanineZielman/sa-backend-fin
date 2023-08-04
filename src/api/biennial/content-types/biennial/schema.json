@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "biennials",
+  "info": {
+    "singularName": "biennial",
+    "pluralName": "biennials",
+    "displayName": "Biennial",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "links": {
+      "type": "richtext"
+    },
+    "ArtistsIntro": {
+      "type": "richtext"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.collapsible",
+        "basic.embed",
+        "basic.image",
+        "basic.sidenote",
+        "basic.text"
+      ]
+    },
+    "tickets": {
+      "type": "dynamiczone",
+      "components": [
+        "biennial.info",
+        "biennial.ticket",
+        "biennial.donate"
+      ]
+    },
+    "visit": {
+      "type": "dynamiczone",
+      "components": [
+        "biennial.location",
+        "biennial.info",
+        "biennial.map",
+        "biennial.collapsible"
+      ]
+    },
+    "biennial_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::biennial-tag.biennial-tag",
+      "inversedBy": "biennials"
+    },
+    "community_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::community-item.community-item",
+      "inversedBy": "biennials"
+    },
+    "news_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::news-item.news-item",
+      "inversedBy": "biennials"
+    },
+    "programmes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::programme.programme",
+      "mappedBy": "biennial"
+    },
+    "prefooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "biennial.prefooter"
+    },
+    "highlight": {
+      "type": "richtext"
+    },
+    "radio": {
+      "type": "text"
+    },
+    "mobile_radio_text": {
+      "type": "string"
+    }
+  }
+}

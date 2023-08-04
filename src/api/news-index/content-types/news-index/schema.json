@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "news_indices",
+  "info": {
+    "singularName": "news-index",
+    "pluralName": "news-indices",
+    "displayName": "News Index",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "news_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::news-item.news-item"
+    }
+  }
+}

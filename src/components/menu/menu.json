@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_menu_menus",
+  "info": {
+    "displayName": "Menu",
+    "icon": "hamburger"
+  },
+  "options": {},
+  "attributes": {
+    "slug": {
+      "type": "string"
+    }
+  }
+}

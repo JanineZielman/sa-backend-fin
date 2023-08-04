@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_biennial_prefooters",
+  "info": {
+    "displayName": "prefooter",
+    "icon": "arrow-alt-circle-down"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "logos": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "community_items",
+  "info": {
+    "singularName": "community-item",
+    "pluralName": "community-items",
+    "displayName": "Community Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "name": {
+      "type": "string"
+    },
+    "job_description": {
+      "type": "string"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.text",
+        "basic.image",
+        "basic.embed",
+        "basic.sidenote"
+      ]
+    },
+    "footnotes": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footnotes.footnotes"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "programmes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::programme.programme",
+      "inversedBy": "community_items"
+    },
+    "biennials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::biennial.biennial",
+      "mappedBy": "community_items"
+    },
+    "discover_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::discover-item.discover-item",
+      "mappedBy": "authors"
+    },
+    "agenda_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::agenda-item.agenda-item",
+      "inversedBy": "community_items"
+    }
+  }
+}

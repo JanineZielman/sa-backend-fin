@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "singularName": "location",
+    "pluralName": "locations",
+    "displayName": "Location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "location": {
+      "type": "text"
+    },
+    "programmes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::programme.programme",
+      "inversedBy": "locations"
+    },
+    "title": {
+      "type": "string"
+    },
+    "orderTitle": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid"
+    }
+  }
+}

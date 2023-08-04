@@ -1,0 +1,148 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programmes",
+  "info": {
+    "singularName": "programme",
+    "pluralName": "programmes",
+    "displayName": "Programme",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::location.location",
+      "mappedBy": "programmes"
+    },
+    "biennial_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::biennial-tag.biennial-tag",
+      "inversedBy": "programmes"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "community_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::community-item.community-item",
+      "mappedBy": "programmes"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.collapsible",
+        "basic.embed",
+        "basic.image",
+        "basic.sidenote",
+        "basic.text"
+      ]
+    },
+    "biennial": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::biennial.biennial",
+      "inversedBy": "programmes"
+    },
+    "sub_programmes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::programme.programme",
+      "mappedBy": "main_programmes"
+    },
+    "main_programmes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::programme.programme",
+      "inversedBy": "sub_programmes"
+    },
+    "main": {
+      "type": "boolean"
+    },
+    "programme": {
+      "type": "string"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "deadline": {
+      "type": "date"
+    },
+    "price": {
+      "type": "float"
+    },
+    "ticket_link": {
+      "type": "string"
+    },
+    "dates": {
+      "type": "dynamiczone",
+      "components": [
+        "dates.deadline",
+        "dates.dates"
+      ]
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::community-item.community-item"
+    },
+    "sub_programmes_title": {
+      "type": "string"
+    },
+    "times": {
+      "type": "dynamiczone",
+      "components": [
+        "biennial.times"
+      ]
+    },
+    "sub_programmes_show_times": {
+      "type": "boolean"
+    },
+    "WhenWhere": {
+      "type": "dynamiczone",
+      "components": [
+        "biennial.when-where"
+      ]
+    },
+    "free": {
+      "type": "boolean"
+    },
+    "registration_link": {
+      "type": "string"
+    },
+    "registration_label": {
+      "type": "string"
+    },
+    "order": {
+      "type": "biginteger",
+      "default": "0"
+    }
+  }
+}

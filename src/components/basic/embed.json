@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_basic_embeds",
+  "info": {
+    "displayName": "Embed",
+    "icon": "external-link-square-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "sound": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

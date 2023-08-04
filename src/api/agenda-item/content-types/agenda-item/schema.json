@@ -1,0 +1,107 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agenda_items",
+  "info": {
+    "singularName": "agenda-item",
+    "pluralName": "agenda-items",
+    "displayName": "Agenda Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.image",
+        "basic.text",
+        "basic.embed",
+        "basic.sidenote"
+      ]
+    },
+    "community_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::community-item.community-item",
+      "inversedBy": "agenda_items"
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "location": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "footnotes": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footnotes.footnotes"
+    },
+    "dates": {
+      "type": "dynamiczone",
+      "components": [
+        "dates.dates",
+        "dates.deadline"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "agenda_items"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "agenda_items"
+    },
+    "available_at": {
+      "type": "richtext"
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "opencall",
+        "event"
+      ],
+      "default": "event",
+      "required": true
+    },
+    "deadline": {
+      "type": "date"
+    },
+    "hide": {
+      "type": "boolean"
+    },
+    "news_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::news-item.news-item",
+      "inversedBy": "agenda_items"
+    }
+  }
+}

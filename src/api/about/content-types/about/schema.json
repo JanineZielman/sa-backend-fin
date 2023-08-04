@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.image",
+        "basic.sidenote",
+        "basic.text",
+        "basic.collapsible"
+      ]
+    },
+    "contact_adres": {
+      "type": "text"
+    },
+    "contact_info": {
+      "type": "text"
+    },
+    "contact_links": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "kind": "singleType",
+  "collectionName": "globals",
+  "info": {
+    "singularName": "global",
+    "pluralName": "globals",
+    "displayName": "Global",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "footer_links": {
+      "type": "dynamiczone",
+      "components": [
+        "links.slug"
+      ]
+    },
+    "favicon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    },
+    "festival_title": {
+      "type": "string"
+    },
+    "festival_shown": {
+      "type": "boolean"
+    },
+    "festival_slug": {
+      "type": "string"
+    },
+    "socials": {
+      "type": "dynamiczone",
+      "components": [
+        "socials.social"
+      ]
+    },
+    "prefooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "biennial.prefooter"
+    }
+  }
+}

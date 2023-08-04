@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_basic_collapsibles",
+  "info": {
+    "displayName": "collapsible",
+    "icon": "angle-up",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic.text"
+    },
+    "open": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

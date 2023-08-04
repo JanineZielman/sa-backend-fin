@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "discover_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::discover-item.discover-item",
+      "mappedBy": "tags"
+    },
+    "agenda_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::agenda-item.agenda-item",
+      "mappedBy": "tags"
+    },
+    "news_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::news-item.news-item",
+      "mappedBy": "tags"
+    }
+  }
+}

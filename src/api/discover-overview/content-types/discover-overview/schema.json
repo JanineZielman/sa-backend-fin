@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "discover_overviews",
+  "info": {
+    "singularName": "discover-overview",
+    "pluralName": "discover-overviews",
+    "displayName": "Archive Overview",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "introTextBig": {
+      "type": "text"
+    },
+    "introTextSmall": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_biennial_programmes",
+  "info": {
+    "displayName": "programme",
+    "icon": "list-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "programme": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::programme.programme"
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::location.location"
+    }
+  }
+}

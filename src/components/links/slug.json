@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_links_slugs",
+  "info": {
+    "displayName": "slug",
+    "icon": "angle-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "slug": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

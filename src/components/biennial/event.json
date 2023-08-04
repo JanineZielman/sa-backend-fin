@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_biennial_events",
+  "info": {
+    "displayName": "event",
+    "icon": "asterisk",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "programme": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::programme.programme"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::location.location"
+    },
+    "date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "whole_day": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_biennial_locations",
+  "info": {
+    "displayName": "location",
+    "icon": "search-location",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::location.location"
+    }
+  }
+}

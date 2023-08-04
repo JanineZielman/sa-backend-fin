@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_biennial_when_wheres",
+  "info": {
+    "displayName": "WhenWhere",
+    "icon": "arrow-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::location.location"
+    },
+    "dates": {
+      "type": "component",
+      "repeatable": true,
+      "component": "biennial.dates"
+    },
+    "times": {
+      "type": "component",
+      "repeatable": true,
+      "component": "biennial.times"
+    }
+  }
+}

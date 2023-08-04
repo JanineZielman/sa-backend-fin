@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_basic_dates",
+  "info": {
+    "displayName": "dates",
+    "icon": "calendar-day",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news_items",
+  "info": {
+    "singularName": "news-item",
+    "pluralName": "news-items",
+    "displayName": "News Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.image",
+        "basic.text",
+        "basic.embed",
+        "basic.sidenote"
+      ]
+    },
+    "community_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::community-item.community-item"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "footnotes": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footnotes.footnotes"
+    },
+    "date": {
+      "type": "date"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "news_items"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "news_items"
+    },
+    "biennials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::biennial.biennial",
+      "mappedBy": "news_items"
+    },
+    "discover_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::discover-item.discover-item",
+      "mappedBy": "news_items"
+    },
+    "agenda_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::agenda-item.agenda-item",
+      "mappedBy": "news_items"
+    }
+  }
+}

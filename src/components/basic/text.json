@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_basic_texts",
+  "info": {
+    "displayName": "Text",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text_block": {
+      "type": "richtext"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "medium",
+        "big"
+      ]
+    }
+  }
+}

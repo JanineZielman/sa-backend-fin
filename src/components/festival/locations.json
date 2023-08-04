@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_festival_locations",
+  "info": {
+    "displayName": "locations",
+    "icon": "location-arrow",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "location": {
+      "type": "text"
+    }
+  }
+}

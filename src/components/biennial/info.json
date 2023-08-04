@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_biennial_infos",
+  "info": {
+    "displayName": "info",
+    "icon": "info-circle"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

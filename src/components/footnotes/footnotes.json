@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_basic_footnotes",
+  "info": {
+    "displayName": "Footnotes",
+    "icon": "notes-medical",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "footnotes": {
+      "type": "richtext"
+    }
+  }
+}

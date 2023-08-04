@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_seo_shared_seos",
+  "info": {
+    "displayName": "SharedSeo",
+    "icon": "info"
+  },
+  "options": {},
+  "attributes": {
+    "MetaTitle": {
+      "type": "string"
+    },
+    "MetaDescription": {
+      "type": "string"
+    },
+    "ShareImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

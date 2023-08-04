@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_biennial_days",
+  "info": {
+    "displayName": "day",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "programme": {
+      "displayName": "location",
+      "type": "component",
+      "repeatable": true,
+      "component": "single-programme.location"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::location.location"
+    },
+    "sub_location": {
+      "type": "boolean"
+    },
+    "sub_locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::location.location"
+    }
+  }
+}

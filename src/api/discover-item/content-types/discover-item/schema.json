@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discover_items",
+  "info": {
+    "singularName": "discover-item",
+    "pluralName": "discover-items",
+    "displayName": "Archive Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.image",
+        "basic.text",
+        "basic.sidenote",
+        "basic.embed"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "community_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::community-item.community-item"
+    },
+    "links": {
+      "type": "richtext"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "discover_items"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "discover_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discover-item.discover-item"
+    },
+    "agenda_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::agenda-item.agenda-item"
+    },
+    "footnotes": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footnotes.footnotes"
+    },
+    "date": {
+      "type": "date"
+    },
+    "hide": {
+      "type": "boolean",
+      "required": false
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "discover_items"
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::community-item.community-item",
+      "inversedBy": "discover_items"
+    },
+    "news_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::news-item.news-item",
+      "inversedBy": "discover_items"
+    },
+    "additional_info": {
+      "type": "string"
+    },
+    "hide_date": {
+      "type": "boolean"
+    },
+    "hide_names": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

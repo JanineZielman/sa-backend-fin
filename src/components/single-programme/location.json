@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_single_location_locations",
+  "info": {
+    "displayName": "single-programme",
+    "icon": "map-marker-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "programme": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::programme.programme"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "sub_location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::location.location"
+    }
+  }
+}

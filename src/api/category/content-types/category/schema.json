@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "discover_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discover-item.discover-item",
+      "mappedBy": "category"
+    },
+    "title": {
+      "type": "string"
+    },
+    "order": {
+      "type": "string"
+    },
+    "agenda_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::agenda-item.agenda-item",
+      "mappedBy": "category"
+    },
+    "news_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::news-item.news-item",
+      "mappedBy": "category"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "sub_category": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

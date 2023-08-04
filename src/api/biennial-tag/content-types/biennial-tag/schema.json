@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "biennial_tags",
+  "info": {
+    "singularName": "biennial-tag",
+    "pluralName": "biennial-tags",
+    "displayName": "Biennial Tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "order": {
+      "type": "string"
+    },
+    "programmes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::programme.programme",
+      "mappedBy": "biennial_tags"
+    },
+    "biennials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::biennial.biennial",
+      "mappedBy": "biennial_tags"
+    }
+  }
+}
