@@ -45,6 +45,12 @@
     "sub_category": {
       "type": "boolean",
       "default": false
+    },
+    "spatial_sound_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::spatial-sound-item.spatial-sound-item",
+      "mappedBy": "category"
     }
   }
 }

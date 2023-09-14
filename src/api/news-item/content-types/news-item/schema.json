@@ -79,6 +79,12 @@
       "relation": "manyToMany",
       "target": "api::agenda-item.agenda-item",
       "mappedBy": "news_items"
+    },
+    "spatial_sound_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::spatial-sound-item.spatial-sound-item",
+      "inversedBy": "news_items"
     }
   }
 }

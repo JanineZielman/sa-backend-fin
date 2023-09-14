@@ -18,6 +18,9 @@
     "open_on_homepage": {
       "type": "boolean",
       "default": false
+    },
+    "order": {
+      "type": "biginteger"
     }
   }
 }

@@ -73,6 +73,12 @@
       "relation": "manyToMany",
       "target": "api::agenda-item.agenda-item",
       "inversedBy": "community_items"
+    },
+    "spatial_sound_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::spatial-sound-item.spatial-sound-item",
+      "inversedBy": "authors"
     }
   }
 }

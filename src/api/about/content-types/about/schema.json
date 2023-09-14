@@ -18,10 +18,10 @@
     "content": {
       "type": "dynamiczone",
       "components": [
+        "basic.collapsible",
         "basic.image",
         "basic.sidenote",
-        "basic.text",
-        "basic.collapsible"
+        "basic.text"
       ]
     },
     "contact_adres": {
@@ -32,6 +32,16 @@
     },
     "contact_links": {
       "type": "richtext"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

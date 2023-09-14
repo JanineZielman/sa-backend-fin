@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "spatial_sound_overviews",
+  "info": {
+    "singularName": "spatial-sound-overview",
+    "pluralName": "spatial-sound-overviews",
+    "displayName": "Spatial Sound Overview",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "introTextBig": {
+      "type": "text"
+    },
+    "introTextSmall": {
+      "type": "richtext"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

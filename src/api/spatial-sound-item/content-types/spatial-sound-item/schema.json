@@ -1,0 +1,104 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spatial_sound_items",
+  "info": {
+    "singularName": "spatial-sound-item",
+    "pluralName": "spatial-sound-items",
+    "displayName": "Spatial Sound Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "basic.image",
+        "basic.text",
+        "basic.sidenote",
+        "basic.embed"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "links": {
+      "type": "richtext"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "footnotes": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footnotes.footnotes"
+    },
+    "date": {
+      "type": "date"
+    },
+    "hide": {
+      "type": "boolean"
+    },
+    "additional_info": {
+      "type": "string"
+    },
+    "hide_date": {
+      "type": "boolean"
+    },
+    "hide_names": {
+      "type": "boolean"
+    },
+    "community_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::community-item.community-item"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "spatial_sound_items"
+    },
+    "discover_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discover-item.discover-item"
+    },
+    "agenda_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::agenda-item.agenda-item"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "spatial_sound_items"
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::community-item.community-item",
+      "inversedBy": "spatial_sound_items"
+    },
+    "news_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::news-item.news-item",
+      "inversedBy": "spatial_sound_items"
+    }
+  }
+}
