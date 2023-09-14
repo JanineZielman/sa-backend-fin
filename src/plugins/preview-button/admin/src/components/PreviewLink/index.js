@@ -10,26 +10,38 @@
         return null;
       }
 
-      var type = window.location.pathname.substring(
-        window.location.pathname.indexOf(".") + 1, 
-        window.location.pathname.lastIndexOf("/")
-      );
-
-      console.log(type)
+      var type = window.location.pathname.substring(window.location.pathname.indexOf(".") + 1).split('-item')[0];
     
       return (
-        <LinkButton
-          size="S"
-          startIcon={<Eye/>}
-          style={{width: '100%'}}
-          // href={`${CLIENT_FRONTEND_URL}?secret=${CLIENT_PREVIEW_SECRET}&slug=${initialData.slug}`}
-          href={`${CLIENT_FRONTEND_URL}/${type.replace('discover', 'archive')}/${initialData.slug}?preview=true`}
-          variant="secondary"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="page preview"
-        >Preview
-        </LinkButton>
+        <>
+        {type == initialData.slug ?
+          <LinkButton
+            size="S"
+            startIcon={<Eye/>}
+            style={{width: '100%'}}
+            // href={`${CLIENT_FRONTEND_URL}?secret=${CLIENT_PREVIEW_SECRET}&slug=${initialData.slug}`}
+            href={`${CLIENT_FRONTEND_URL}/${initialData.slug}?preview=true`}
+            variant="secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="page preview"
+          >Preview
+          </LinkButton>
+        :
+          <LinkButton
+            size="S"
+            startIcon={<Eye/>}
+            style={{width: '100%'}}
+            // href={`${CLIENT_FRONTEND_URL}?secret=${CLIENT_PREVIEW_SECRET}&slug=${initialData.slug}`}
+            href={`${CLIENT_FRONTEND_URL}/${type.replace('discover', 'archive')}/${initialData.slug}?preview=true`}
+            variant="secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="page preview"
+          >Preview
+          </LinkButton>
+        }
+        </>
       );
     };
     
