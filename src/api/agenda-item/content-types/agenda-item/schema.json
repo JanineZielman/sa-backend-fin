@@ -28,7 +28,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::community-item.community-item",
-      "inversedBy": "agenda_items"
+      "mappedBy": "agenda_items"
     },
     "title": {
       "type": "string"

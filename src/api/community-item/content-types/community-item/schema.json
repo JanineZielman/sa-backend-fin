@@ -34,10 +34,10 @@
     "content": {
       "type": "dynamiczone",
       "components": [
-        "basic.text",
-        "basic.image",
         "basic.embed",
-        "basic.sidenote"
+        "basic.image",
+        "basic.sidenote",
+        "basic.text"
       ]
     },
     "footnotes": {
@@ -79,6 +79,16 @@
       "relation": "manyToMany",
       "target": "api::spatial-sound-item.spatial-sound-item",
       "inversedBy": "authors"
+    },
+    "community_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::community-item.community-item"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.slug"
     }
   }
 }

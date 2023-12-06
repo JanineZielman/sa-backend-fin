@@ -85,6 +85,16 @@
       "relation": "manyToMany",
       "target": "api::spatial-sound-item.spatial-sound-item",
       "inversedBy": "news_items"
+    },
+    "biennial_cover_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -77,7 +77,7 @@
       "repeatable": false,
       "component": "biennial.prefooter"
     },
-    "highlight": {
+    "programme_intro": {
       "type": "richtext"
     },
     "radio": {
@@ -85,6 +85,9 @@
     },
     "mobile_radio_text": {
       "type": "string"
+    },
+    "information_intro": {
+      "type": "richtext"
     }
   }
 }

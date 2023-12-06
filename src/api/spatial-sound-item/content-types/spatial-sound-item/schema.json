@@ -92,13 +92,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::community-item.community-item",
-      "inversedBy": "spatial_sound_items"
+      "mappedBy": "spatial_sound_items"
     },
     "news_items": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::news-item.news-item",
-      "inversedBy": "spatial_sound_items"
+      "mappedBy": "spatial_sound_items"
     }
   }
 }
